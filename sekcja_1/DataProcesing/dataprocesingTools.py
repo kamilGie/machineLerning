@@ -17,7 +17,7 @@ x[:,1:3] = imputer.transform(x[ : ,1:3])
 #tranform the string to some int
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
-ct = ColumnTransformer(transformers=[('encoder',OneHotEncoder(),[0]),('encoder2',OneHotEncoder(),[0])], remainder='passthrough')
+ct = ColumnTransformer(transformers=[('encoder',OneHotEncoder(),[0])], remainder='passthrough')
 x = np.array(ct.fit_transform(x))
 
 #transofrm somie bool string values to bool 0 and 1 
