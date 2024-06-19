@@ -11,7 +11,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.2, random_
 
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
-regressor.fit(X_train, Y_train)
+regressor.fit(X_train, Y_train)   
 
 y_pred = regressor.predict(X_test)
 
