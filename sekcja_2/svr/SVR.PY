@@ -17,4 +17,5 @@ from sklearn.svm import SVR
 regressor = SVR(kernel='rbf')
 regressor.fit(X, y)
 
+# i dont understatn that tbh xd
 sc_y.inverse_transform(regressor.predict(sc_x.transform([[6.5]])).reshape(-1,1))
