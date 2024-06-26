@@ -21,5 +21,9 @@ classifier = LogisticRegression(random_state=0).fit(X_train,Y_train)
 
 #print(classifier.predict(sc.transform([[30, 87000]])))
 y_pred = classifier.predict(X_test)
+#print(np.concatenate((y_pred.reshape(len(y_pred),1), Y_test.reshape(len(Y_test),1)),1))
 
+from sklearn.metrics import confusion_matrix, accuracy_score
+cm = confusion_matrix(y_pred,Y_test)
+accuracy_score(Y_test,y_pred)
 
