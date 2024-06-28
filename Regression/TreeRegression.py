@@ -16,8 +16,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, rando
 
 # Training the Decision Tree Regression model on the Training set
 from sklearn.tree import DecisionTreeRegressor
-regressor = DecisionTreeRegressor(random_state = 0)
-regressor.fit(X_train, Y_train)
+regressor = DecisionTreeRegressor(random_state = 0).fit(X_train, Y_train)
 
 # Predicting the Test set results
 Y_pred = regressor.predict(X_test)

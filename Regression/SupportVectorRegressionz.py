@@ -17,8 +17,7 @@ X_train = sc_X.fit_transform(X_train)
 Y_train = sc_Y.fit_transform(Y_train)
 
 from sklearn.svm import SVR
-regressor = SVR(kernel = 'rbf')
-regressor.fit(X_train, Y_train)
+regressor = SVR(kernel = 'rbf').fit(X_train, Y_train)
 
 Y_pred = sc_Y.inverse_transform(regressor.predict(sc_X.transform(X_test)).reshape(-1,1))
 np.set_printoptions(precision=2)

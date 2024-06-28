@@ -13,8 +13,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 polY_reg = PolynomialFeatures(degree = 4)
 X_polY = polY_reg.fit_transform(X_train)
-regressor = LinearRegression()
-regressor.fit(X_polY, Y_train)
+regressor = LinearRegression().fit(X_polY, Y_train)
 
 Y_pred = regressor.predict(polY_reg.transform(X_test))
 np.set_printoptions(precision=2)
