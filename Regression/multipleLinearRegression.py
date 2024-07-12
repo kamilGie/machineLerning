@@ -14,7 +14,7 @@ regressor = LinearRegression().fit(X_train, Y_train)
 
 Y_pred = regressor.predict(X_test)
 np.set_printoptions(precision=2)
-print(np.concatenate((Y_pred.reshape(len(Y_pred),1), Y_test.reshape(len(Y_test),1)),1))
+#print(np.concatenate((Y_pred.reshape(len(Y_pred),1), Y_test.reshape(len(Y_test),1)),1))
 
 from sklearn.metrics import r2_score
-r2_score(Y_test, Y_pred)
+print("MultipleLinear \n\tR2 score is: ",r2_score(Y_test, Y_pred))

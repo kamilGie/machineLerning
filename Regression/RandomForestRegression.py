@@ -15,7 +15,7 @@ regressor = RandomForestRegressor(n_estimators = 10, random_state = 0).fit(X_tra
 
 Y_pred = regressor.predict(X_test)
 np.set_printoptions(precision=2)
-print(np.concatenate((Y_pred.reshape(len(Y_pred),1), Y_test.reshape(len(Y_test),1)),1))
+#print(np.concatenate((Y_pred.reshape(len(Y_pred),1), Y_test.reshape(len(Y_test),1)),1))
 
 from sklearn.metrics import r2_score
-r2_score(Y_test, Y_pred)
+print("RandomForest\n\tR2 score is: ",r2_score(Y_test, Y_pred))
