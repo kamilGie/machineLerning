@@ -14,8 +14,8 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-from sklearn.tree import DecisionTreeClassifier
-classifier = DecisionTreeClassifier(criterion = 'entropy').fit(X_train, y_train)
+from sklearn.ensemble import RandomForestClassifier
+classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy').fit(X_train, y_train)
 
 from sklearn.metrics import confusion_matrix, accuracy_score
 y_pred = classifier.predict(X_test)
