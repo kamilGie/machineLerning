@@ -17,8 +17,5 @@ X_test = sc.transform(X_test)
 from sklearn.naive_bayes import GaussianNB
 classifier = GaussianNB().fit(X_train, y_train)
 
-from sklearn.metrics import confusion_matrix, accuracy_score
-y_pred = classifier.predict(X_test)
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
-accuracy_score(y_test, y_pred)
+from sklearn.metrics import accuracy_score
+print("NeiveBayes\n\tAccuracy score is: ",accuracy_score(y_test, classifier.predict(X_test)))
